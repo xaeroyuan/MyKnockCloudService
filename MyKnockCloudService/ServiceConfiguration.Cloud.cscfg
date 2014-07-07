@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="MyKnockCloudService"  xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-01.2.3">
+  <Role name="MyKnockCloudServiceWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=myknockcloudservice;AccountKey=UeOyG2dCtIwqSvIUeX+q4pKMBV6Pz0zPF7hfwDIW7MKo6Db9aAsjWbkNOlnPzhAbZJYv88o+rtKuZTTXmyHRxA==" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>
