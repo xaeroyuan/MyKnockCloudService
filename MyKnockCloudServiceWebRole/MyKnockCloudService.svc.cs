@@ -99,15 +99,16 @@ namespace knockknock.readify.net
             // all edges are equal
             if ((a == b) && (b == c))
                 return TriangleType.Equilateral;
-            // two edges are equal
-            else if (a == b || (b == c) || (a == c))
-                return TriangleType.Isosceles;
 
             TriangleType ret = TriangleType.Error;
             // the edges condition to be a triangle, use minus(-) here to avoid integer overflow by using plus(+)
             if ((a > Math.Abs(b - c)) && (b > Math.Abs(c - a)) && (c > Math.Abs(a - b)))
+            {
                 ret = TriangleType.Scalene;
-            // return error
+                // two edges are equal
+                if (a == b || (b == c) || (a == c))
+                    ret = TriangleType.Isosceles;
+            }
             return ret;
         }
     }
